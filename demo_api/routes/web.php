@@ -20,10 +20,11 @@ Route::get('/', function () {
 
 Route::get('/info', 'UserController@infoList');
 Route::post('/info', 'UserController@insert');
+Route::get('/info/{id}', 'UserController@infoWithID');
+Route::post('/info/{id}', 'UserController@update');
+Route::delete('/info/{id}', 'UserController@delete');
+
 //
 
-Route::get('/info/{id}', 'UserController@infoWithID');
 
-Route::post('/info/{id}', 'UserController@update');
-
-Route::delete('/info/{id}', 'UserController@delete');
+Route::post('/login', 'UserController@login');
