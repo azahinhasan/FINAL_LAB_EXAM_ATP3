@@ -19,6 +19,8 @@ Route::get('/', function () {
 //Route::get('/info', 'UserController@infoList');
 
 Route::get('/info', 'UserController@infoList');
+Route::get('/info/search/{name}', 'UserController@search');
+
 Route::post('/info', 'UserController@insert');
 Route::get('/info/{id}', 'UserController@infoWithID');
 Route::post('/info/{id}', 'UserController@update');

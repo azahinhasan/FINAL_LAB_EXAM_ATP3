@@ -14,6 +14,14 @@ class UserController extends Controller
             return  $user;
     }
 
+    public function search($name){
+        $user = DB::table('user')
+        ->where('Name',$name)
+            ->get();
+
+            return  $user;
+    }
+
     public function insert(Request $req){
 
         DB::table('user')->insert(
